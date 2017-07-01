@@ -3,9 +3,11 @@
 pushd %~dp0
 
 REM Command file for Sphinx documentation
+set pythonexe=python
+if exist c:\Python36_x64 set pythonexe=c:\Python36_x64\python
 
 if "%SPHINXBUILD%" == "" (
-	set SPHINXBUILD=python -msphinx
+	set SPHINXBUILD=%pythonexe% -msphinx
 )
 set SOURCEDIR=source
 set BUILDDIR=build

@@ -17,9 +17,12 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import os
+import sys
+this = os.path.abspath(os.path.dirname(__file__))
+pyq = os.path.join(this, "..", "..", "..", "..", "pyquickhelper", "src")
+sys.path.append(pyq)
+sys.path.insert(0, os.path.abspath(this))
 
 
 # -- General configuration ------------------------------------------------
@@ -34,7 +37,8 @@
 extensions = ['sphinx.ext.intersphinx',
     'sphinx.ext.imgmath',
     'sphinx.ext.ifconfig',
-    'sphinx.ext.viewcode']
+    'sphinx.ext.viewcode',
+    'pyquickhelper.sphinxext.sphinx_runpython_extension']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
