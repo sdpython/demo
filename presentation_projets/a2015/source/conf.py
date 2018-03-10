@@ -17,7 +17,7 @@ import os
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinxjp.themes.revealjs',
+    'pyquickhelper.sphinxext.revealjs',
     'sphinx.ext.pngmath',
 ]
 
