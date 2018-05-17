@@ -20,8 +20,6 @@
 import os
 import sys
 this = os.path.abspath(os.path.dirname(__file__))
-pyq = os.path.join(this, "..", "..", "..", "..", "pyquickhelper", "src")
-sys.path.append(pyq)
 sys.path.insert(0, os.path.abspath(this))
 
 
