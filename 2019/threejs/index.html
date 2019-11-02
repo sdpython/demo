@@ -9,15 +9,20 @@
 
 	<body>
 		<div id="info">
-                <p>Some examples</p>
+                <p id="cdirection"></p>
+                <p id="cposition"></p>
+                <p id="ctemp"></p>
 		</div>
+        
+              <div id="id3d" style="width=1000px;height=800px;">
+              </div>
 
 		<script type="module">
             
            import * as THREE from './js/three.module.js';
 			import { OBJLoader } from './js/OBJLoader.js';
            var objFile = "./female02.obj";
-			var container;
+			var container, coord, coorp, ctemp;
 			var camera, scene, renderer;
            var keyX = 0, keyY = 0, inc_xy = 5;
 			var windowHalfX = window.innerWidth / 2;
@@ -31,8 +36,12 @@
 
 			function init() {
 
-				container = document.createElement( 'div' );
-				document.body.appendChild( container );
+				// container = document.createElement( 'div' );
+               container = document.getElementById("id3d");
+               coorp = document.getElementById("cposition");
+               coord = document.getElementById("cdirection");
+               ctemp = document.getElementById("ctemp");
+				//document.body.appendChild( container );
 				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 100, 2000 );
                camera.position.x = 0;
                camera.position.y = 0;
@@ -119,6 +128,14 @@
                direction.position.x = camera.position.x + 100 * Math.sin( keyX * .001 );  
                direction.position.y = 0;
                direction.position.z = camera.position.z - 100 * Math.cos( keyX * .001 );
+               coord.innerText = "direction=" + direction.position.x.toString() +
+                        "," + direction.position.y.toString() +
+                        "," + direction.position.z.toString();
+               coorp.innerText = "camera=" + camera.position.x.toString() +
+                        "," + camera.position.y.toString() +
+                        "," + camera.position.z.toString();
+               ctemp.innerText = "keyX=" + keyX.toString() +
+                        ", keyY=" + keyY.toString();
 				camera.lookAt( direction.position );
 				renderer.render( scene, camera );
 			}
