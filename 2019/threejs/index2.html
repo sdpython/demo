@@ -21,11 +21,12 @@
             
            import * as THREE from './js/three.module.js';
 			import { OBJLoader } from './js/OBJLoader.js';
+            import { OrbitControls } from './js/OrbitControls.js';
+            import { TrackballControls } from "./js/TrackballControls.js";
            //var objFile = "./female02.obj";
            var objFile = "./room.obj";
 			var container, coord, coorp, ctemp;
-			var camera, scene, renderer;
-           var keyF = 0, keyR = 0, inc_xy = 5;
+			var camera, scene, renderer, controls;
 			var windowHalfX = window.innerWidth / 2;
 			var windowHalfY = window.innerHeight / 2;
             var direction = new THREE.Object3D();
@@ -46,7 +47,7 @@
 				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 100, 2000 );
                camera.position.x = 0;
                camera.position.y = 100;
-				camera.position.z = 200;
+				camera.position.z = 1000;
 
 				// scene
 
@@ -96,26 +97,11 @@
 				renderer.setPixelRatio( window.devicePixelRatio );
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				container.appendChild( renderer.domElement );
-                
-				//
-               document.addEventListener("keydown", onDocumentKeyDown, false);                
-			}
 
-            function onDocumentKeyDown(event) {
-                var keyCode = event.which;
-                if (keyCode == 37) {
-                    keyR += -inc_xy;
-                } else if (keyCode == 39) {
-                    keyR += inc_xy;
-                } else if (keyCode == 38) {
-                    keyF += -inc_xy;
-                } else if (keyCode == 40) {
-                    keyF += inc_xy;
-                } else if (keyCode == 32) {
-                    camera.position.x = windowHalfX;
-                    camera.position.y = windowHalfY;
-                }
-            };
+                controls = new OrbitControls( camera, renderer.domElement );
+                controls.target.set( 0, 0.5, 0 );
+                controls.enablePan = true;
+			}
 
 			//
 
@@ -125,23 +111,9 @@
 			}
 
 			function render() {
-				//camera.position.x += keyX * .05;
-                var dx = direction.position.x - camera.position.x;
-                var dz = direction.position.z - camera.position.z;
-               camera.position.x -= keyF * dx * .003;
-				camera.position.z -= keyF * dz * .003;
-               direction.position.x = camera.position.x + 100 * Math.sin( keyR * .005 );  
-               direction.position.y = 50;
-               direction.position.z = camera.position.z - 100 * Math.cos( keyR * .005 );
-               coord.innerText = "direction=" + direction.position.x.toString() +
-                        "," + direction.position.y.toString() +
-                        "," + direction.position.z.toString();
                coorp.innerText = "camera=" + camera.position.x.toString() +
                         "," + camera.position.y.toString() +
                         "," + camera.position.z.toString();
-               ctemp.innerText = "keyF=" + keyF.toString() +
-                        ", keyR=" + keyR.toString();
-				camera.lookAt( direction.position );
 				renderer.render( scene, camera );
 			}
 
