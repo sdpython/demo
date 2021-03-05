@@ -116,7 +116,7 @@ ENSAE 1A - Projets informatiques
     .. revealjs:: Machine Learning 1 (ou projet 2A)
 
             * Machine Learning : `scikit-learn <http://scikit-learn.org/stable/>`_
-            * `source de données et problèmes <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/ressources.html?highlight=donn%C3%A9es#source-de-donnees>`_
+            * `source de données et problèmes <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/ressources.html?highlight=donn%C3%A9es#source-de-donnees>`_
 
     .. revealjs:: Machine Learning 2
 
