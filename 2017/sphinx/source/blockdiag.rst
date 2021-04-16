@@ -1,11 +1,9 @@
 
-
 Dessiner un graphe avec Sphinx
 ==============================
 
 Cet exemple s'appuie sur l'extension
 `sphinxcontrib-blockdiag <http://blockdiag.com/en/blockdiag/sphinxcontrib.html>`_.
-
 
 .. blockdiag::
    :desctable:
@@ -16,4 +14,3 @@ Cet exemple s'appuie sur l'extension
       B [description = "web server"];
       C [description = "database server"];
    }
- 

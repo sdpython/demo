@@ -1,11 +1,9 @@
 
-
 Create une documentation avec Sphinx
 ====================================
 
 .. contents::
     :local:
-
 
 Startup
 +++++++
@@ -17,18 +15,14 @@ Startup
 5. Modifier le fichier *index.rst*.
 6. Exécuter ``make html`` pour compiler la documentation.
 
-
-
-
 Extensions intéressantes
 ++++++++++++++++++++++++
 
 .. toctree::
    :maxdepth: 1
-   
+
    runpython
    blockdiag
-
 
 Indices and tables
 ==================
@@ -36,5 +30,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
-   

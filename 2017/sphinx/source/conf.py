@@ -33,12 +33,12 @@ sys.path.insert(0, os.path.abspath(this))
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['sphinx.ext.intersphinx',
-    'sphinx.ext.imgmath',
-    'sphinx.ext.ifconfig',
-    'sphinx.ext.viewcode',
-    'pyquickhelper.sphinxext.sphinx_runpython_extension',
-    'sphinxcontrib.blockdiag']
-    
+              'sphinx.ext.imgmath',
+              'sphinx.ext.ifconfig',
+              'sphinx.ext.viewcode',
+              'pyquickhelper.sphinxext.sphinx_runpython_extension',
+              'sphinxcontrib.blockdiag']
+
 blockdiag_fontpath = r"C:\Windows\WinSxS\amd64_microsoft-windows-font-truetype-calibri_31bf3856ad364e35_10.0.14393.351_none_246f5b378dbab0ef\calibri.ttf"
 
 # Add any paths that contain templates here, relative to this directory.
@@ -160,8 +160,6 @@ texinfo_documents = [
      author, 'demo_sphinx', 'One line description of project.',
      'Miscellaneous'),
 ]
-
-
 
 
 # Example configuration for intersphinx: refer to the Python standard library.

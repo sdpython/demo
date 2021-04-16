@@ -75,4 +75,3 @@ print(res['Z'])
 print("Function code:")
 print(translate_fct2onnx(kernel_call_ynone, context=context,
                          output_names=['Z']))
-                         
