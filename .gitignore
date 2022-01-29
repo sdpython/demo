@@ -1,1 +1,8 @@
+__pycache__
 2017/sphinx/build
+2022/onx/auto_examples/
+2022/onx/build/
+2022/onx/*.csv
+2022/onx/*.onnx
+2022/onx/onnxruntime_profile__*.json
+2022/onx/_static/viz.js

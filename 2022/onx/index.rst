@@ -1,9 +1,9 @@
 
-Introduction to ONNX and onnxruntime
+Introduction to onnx and onnxruntime
 ====================================
 
 .. toctree::
     :maxdepth: 2
 
-    tutorials/index
+    tutorial/index
     api/index

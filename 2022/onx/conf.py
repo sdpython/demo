@@ -28,7 +28,6 @@ extensions = [
     "sphinx_gallery.gen_gallery",
     'sphinx.ext.autodoc',
     'sphinx.ext.graphviz',
-    'sphinx_skl2onnx_extension',
     'matplotlib.sphinxext.plot_directive',
     'pyquickhelper.sphinxext.sphinx_cmdref_extension',
     'pyquickhelper.sphinxext.sphinx_collapse_extension',
@@ -179,8 +178,10 @@ custom_preamble = """\n
 """
 
 # \\usepackage{eepic}
-imgmath_latex_preamble += custom_preamble
-latex_elements['preamble'] += custom_preamble
+imgmath_latex_preamble = custom_preamble
+latex_elements = {
+    'preamble': custom_preamble
+}
 
 intersphinx_mapping.update({
     'torch': ('https://pytorch.org/docs/stable/', None),
