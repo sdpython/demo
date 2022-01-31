@@ -112,6 +112,7 @@ epkg_dictionary = {
     'python': 'https://www.python.org/',
     'pytorch': 'https://pytorch.org/',
     'scikit-learn': 'https://scikit-learn.org/stable/',
+    'scipy': 'https://scipy.org/',
     'skorch': 'https://skorch.readthedocs.io/en/stable/',
     'sklearn-onnx': 'https://github.com/onnx/sklearn-onnx',
     'sphinx-gallery': 'https://github.com/sphinx-gallery/sphinx-gallery',
