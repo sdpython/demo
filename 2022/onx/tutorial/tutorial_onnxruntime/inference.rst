@@ -426,9 +426,6 @@ into a table.
 
     plt.show()
 
-Another example can be found in the tutorial:
-:ref:`l-profile-ort-api`.
-
 Graph Optimisations
 ===================
 
@@ -449,8 +446,6 @@ on a disk to look at it.
     so.optimized_model_filepath = "to_save_the_optimized_onnx_file.onnx"
 
 The bigger the graph is, the more efficient optimizations are.
-One example shows how to enable or disable optimizations on a simple
-graph: :ref:`benchmark-ort-onnx-graph-opt`.
 
 Class :epkg:`InferenceSession` as any other class from
 :epkg:`onnxruntime` cannot be pickled. Everything can
