@@ -75,7 +75,7 @@ inputs and outputs.
 The class :epkg:`InferenceSession` is not pickable.
 It must be restored from the ONNX file.
 C API is slightly different. The C object is
-stored in attribute `sess_`.
+stored in attribute `_sess`.
 
 .. runpython::
     :showcode:
@@ -207,7 +207,6 @@ Next lines show how to do computation on GPU
 with :epkg:`onnxruntime`. Method `run` was using numpy arrays,
 another method is needed to use another device.
 The choice is not unique.
-Example :ref:`benchmark-ort-api` shows which API is the fastest.
 
 C_OrtValue
 ~~~~~~~~~~
